@@ -1,0 +1,12 @@
+AWSTemplateFormatVersion: 2010-09-09
+Transform: AWS::Serverless-2016-10-31
+Description: AWS Lambda sample by Rust
+Resources:
+  RustRuntimeSampleTest:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: rust-lambda-sam-sample
+      CodeUri: s3://rust-runtime-tninomiya-20201128/77a236f0c2ccb200b728d3d3391c390b
+      Handler: bootstrap.is.real.handler
+      Runtime: provided
+      Tracing: Active
